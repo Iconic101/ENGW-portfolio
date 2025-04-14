@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Becoming Bibesh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #2c3e50;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #ffffffee;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      z-index: 20;
+      padding-top: 4rem;
+      box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+      transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      color: #1a237e;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #1a237e;
+      color: white;
+    }
+
+    .menu-toggle {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background-color: #4286f4;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      z-index: 30;
+      cursor: pointer;
+    }
+
+    main {
+      margin-left: 0;
+      width: 100%;
+      transition: margin-left 0.3s ease;
+      padding-left: 1rem;
+    }
+
+    .sidebar.open~main {
+      margin-left: 250px;
+    }
+
+    header {
+      background: linear-gradient(to right, #373B44, #4286f4);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 960px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #0d47a1;
+      text-align: center;
+    }
+
+    .quote {
+      background: #f1f8ff;
+      border-left: 6px solid #42a5f5;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    .bio-image {
+      max-width: 180px;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    img.essay-image {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1a237e;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <div class="sidebar" id="sidebar">
+    <a href="#essay-showcase">Essays</a>
+    <a href="#essay1-reflection">Essay 1 Reflection</a>
+    <a href="#essay2-reflection">Essay 2 Reflection</a>
+    <a href="#shared-themes">Shared Themes</a>
+    <a href="#final-reflection">Final Reflection</a>
+    <a href="#about">About Me</a>
+  </div>
+
+  <main>
+    <header>
+      <h1>Becoming Bibesh</h1>
+      <p>A Journey of Resilience and Self-Discovery</p>
+    </header>
+
+    <section id="essay-showcase">
+      <h2>My Growth Through Words</h2>
+
+      <h3 id="essay1-reflection">Essay 1: My Late and Transformative Reading Journey</h3>
+      <img src="asiof.jpg" alt="A Song of Ice and Fire book collection" class="essay-image">
+      <p>I never liked reading growing up. In fact, I almost despised it. In school, reading was always reduced to
+        comprehension tests, vocabulary memorization, and tedious summaries. It felt like a chore—cold, lifeless, and
+        disconnected from me.</p>
+      <p>But something shifted when I picked up *A Game of Thrones* by George R.R. Martin, not for a school assignment,
+        but for the sake up improving my poor English comprehension, reading and writing skills. I didn’t expect much,
+        but I was curious why people were so obsessed with the series. The first few pages were hard. The sentences were
+        dense, the world foreign. But then… something clicked. I got hooked on the politics, the flawed characters, and
+        the grim reality they faced. For the first time, I found myself immersed in a world that didn’t feel forced. I
+        kept reading. Then writing. Then imagining my own stories.</p>
+      <p>That book opened the floodgates. I started reading voraciously: fantasy, essays, classics, even literary
+        criticism. Words became something I craved—not just to understand SAT passages, but to build worlds, convey
+        emotions, and understand people. I started small by writing fan fiction, and now I’m drafting my original
+        fantasy novel. It’s messy, chaotic, and imperfect—but it’s mine.</p>
+      <div class="quote">“I started small by writing fan fiction... now I’m drafting my original fantasy novel.”</div>
+      <p> When I reflect upon how transformative this journey has been for my academic career as well as for my personal
+        growth, it feels strange to remember that I had no interest in reading until my goal pushed me to start doing
+        it. If I hadn't embraced that challenge back then, I would have missed out on so many great opportunities that I
+        was able to grab and those that are still available to me. This really goes to show how allowing and embracing
+        new life experiences, regardless of how late, can create opportunities for personal growth and success.
+      </p>
+      <h3 id="essay2-reflection">Essay 2: The Feeling of Failures and Success</h3>
+      <img src="cover.png" alt="College struggle and success"
+        class="essay-image">
+      <p>This piece dives deep into my emotional and mental challenges during the college application process. It was
+        easily the darkest and most uncertain period of my life. Rejections from colleges and scholarship
+        disappointments hit harder than I expected—not because they closed doors, but because they made me question my
+        self-worth.</p>
+      <p>One of the hardest things I had to do was tell people I didn’t get in. That I wasn’t chosen. That I had worked
+        so hard, and it didn’t matter. But I realized: it did matter. Not in the way I thought, but in the way I grew.
+        The experience was brutal, no doubt about it, but it taught me struggle, persseverance and and appriciation of
+        the good things that happened in my life.
+      </p>
+      <p>Eventually, I found my place at Howard University. It wasn’t the school I initially dreamed of, but it became
+        the school I was meant to be at. I connected with people, found mentors, and discovered a deeper version of
+        myself. I learned how to fail without being a failure.</p>
+      <div class="quote">“I chose to be the writer of my faith rather than let my faith dictate my life…”</div>
+      <p>Writing about this pain helped me process it. It gave me closure, and more importantly, clarity. Success isn’t
+        just about getting in. It’s about getting through. It’s not something I win. It’s something I build—every day,
+        with effort, heart, and a whole lot of hope.</p>
+    </section>
+
+    <section id="shared-themes">
+      <h2>Shared Themes and Broader Lessons</h2>
+      <p> These two pieces describe different but overlapping pieces in my life, If I hadn't started my reading journey,
+        I wouldn't have done well in the SATs which was the beginning of my second piece.
+        Though Essay 1 and Essay 2 differ in subject, they converge on important life lessons. At their core, both
+        stories represent a kind of journey—one intellectual and creative, the other emotional and existential. But both
+        journeys forced me to confront who I was and who I wanted to be.</p>
+      <ul>
+        <li><strong>Transformation:</strong> Each story reflects how I evolved—whether through developing a passion for
+          reading or navigating crushing setbacks. Both experiences reshaped how I think, act, and dream.</li>
+        <li><strong>Resilience:</strong> Whether it was pushing through rejecting initial failures in the SAT or picking
+          myself up after
+          rejections, resilience was at the heart of every turning point in my journey.</li>
+        <li><strong>Growth Through Discomfort:</strong> In both stories, my biggest moments of change came from times
+          when I was uncomfortable—learning to read critically or facing the fear of failure. Discomfort became my
+          catalyst for growth.</li>
+        <li><strong>Identity:</strong> Both essays explore how I started becoming who I am today—someone who embraces
+          the power of storytelling, someone who fights for his future, and someone who is continuously evolving.</li>
+      </ul>
+    </section>
+
+    <section id="final-reflection">
+      <h2>Final Reflection</h2>
+      <p>Most importantly, I’ve learned that our journeys often don’t go as planned, but that doesn’t mean they aren’t
+        meaningful.  They shape us in unexpected, beautiful ways. These essays tell the
+        story of how I became someone who
+        doesn’t just dream, but also acts—and someone who doesn’t run from failure, but grows from it. When I started reading books, I didn't know I'd end up writing my own stories and I obviously didn't
+        see myself at a great school like Howard. If I had given in to despair and hopelessness, I would't have been part of these beautiful things. My life lesson is: You don't always know where your hardwork will take you, but struggling despite failures and perssevering will always be worth it </p>
+      <p>Writing these two very personal pieces of writing has had a profound impact on me. I come from a culture which
+        prioritises community at the cost of individuality. We are not taught to speak, think and write for ourselves.
+        At the beginning of this school year, I was therefore hesitant to be writing so much about my journies and
+        experences. But as a complete my freshman year, I feel much more confident to do it </p>
+      <p><strong>Final Words:</strong> Life will always throw challenges our way — some that we see coming and others
+        that catch us completely off guard. But within every challenge lies a lesson, and within every setback lies the
+        potential for breakthrough. My story is far from over, but if there's one thing I know now, it’s that I will
+        continue to grow, reflect, and keep moving forward — with purpose, with passion, and with hope.</p>
+    </section>
+
+    <section id="about">
+      <h2>Author Bio</h2>
+      <img src="https://images.unsplash.com/photo-1603415526960-f7e0328f0832" class="bio-image" alt="Bibesh">
+      <p><strong>Bibesh Sedhain</strong> is a freshman Computer Science major at Howard University. Originally from
+        Kathmandu, Nepal, his story is one of resilience, identity, and growth. He aspires to pursue a career in AI/ML
+        and continues to write in his free time.</p>
+      <p><em>Favorite Quote:</em> “Failure is not the opposite of success, it’s part of success.” — Arianna Huffington
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Bibesh Sedhain | ENGW 105 Portfolio</p>
+    </footer>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    document.querySelectorAll('.sidebar a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        toggleMenu(); // close menu after click
+      });
+    });
+  </script>
+</body>
+
+</html>
